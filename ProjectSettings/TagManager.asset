@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - PlayerHand
+  - QuestionMark
+  - Number31
+  - Congratz
+  - Wrong
   layers:
   - Default
   - TransparentFX
