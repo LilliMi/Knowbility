@@ -19,6 +19,7 @@ public class ButtonControll : MonoBehaviour
     // TextMessages
     private GameObject Congratz;
     private GameObject WrongNumber;
+    private GameObject StartNextLevelButton;
 
     // Start is called before the first frame update
     void Start()
@@ -34,8 +35,11 @@ public class ButtonControll : MonoBehaviour
         Number31 = GameObject.FindWithTag("Number31");
         Congratz = GameObject.FindWithTag("Congratz");
         WrongNumber = GameObject.FindWithTag("Wrong");
+        StartNextLevelButton = GameObject.FindWithTag("StartNextLevel");
+
         Congratz.SetActive(false);
         WrongNumber.SetActive(false);
+        StartNextLevelButton.SetActive(false);
     }
 
     // Update is called once per frame
@@ -64,6 +68,7 @@ public class ButtonControll : MonoBehaviour
 
             Congratz.SetActive(false);
             WrongNumber.SetActive(false);
+            StartNextLevelButton.SetActive(false);
 
 
             if (QuestionMark != null && Number31 != null)
@@ -78,6 +83,7 @@ public class ButtonControll : MonoBehaviour
 
                 if(distance <= sumRadius){
                     Congratz.SetActive(true);
+                    StartNextLevelButton.SetActive(true);
                 } else{
                     WrongNumber.SetActive(true);
                 }

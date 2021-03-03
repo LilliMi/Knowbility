@@ -9,6 +9,7 @@ TagManager:
   - Number31
   - Congratz
   - Wrong
+  - StartNextLevel
   layers:
   - Default
   - TransparentFX
