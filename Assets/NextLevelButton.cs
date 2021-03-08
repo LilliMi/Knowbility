@@ -5,18 +5,22 @@ using UnityEngine.SceneManagement;
 
 public class NextLevelButton : MonoBehaviour
 {
+    private bool buttonHit = false;
+    private GameObject StartNextLevelButton;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        SceneManager.LoadScene("LevelTwo_KnowbilityScene");
+        StartNextLevelButton = GameObject.FindWithTag("StartNextLevel");
     }
 
     // Update is called once per frame
     void Update()
     {
-        SceneManager.LoadScene("LevelTwo_KnowbilityScene");
+        if(buttonHit == true){
+             buttonHit = false;
+        }
     }
 
     private void OnTriggerEnter(Collider other) {
