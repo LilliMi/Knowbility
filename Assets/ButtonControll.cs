@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class ButtonControll : MonoBehaviour
 {
@@ -20,31 +21,56 @@ public class ButtonControll : MonoBehaviour
     private GameObject Congratz;
     private GameObject WrongNumber;
     private GameObject StartNextLevelButton;
+    //private GameObject LevelNameTwo;
+    //private GameObject LevelNameThree;
 
     // Start is called before the first frame update
     void Start()
     {
-        //Button
+        
+        Scene currentScene = SceneManager.GetActiveScene ();
+ 
+         string sceneName = currentScene.name;
+ 
+         if (sceneName == "KnowbilityScene") 
+         {
+             //Button
             //source = gameObject.AddComponent // für Sound später
 
             button = transform.GetChild(0).gameObject;
             buttonOriginalY = button.transform.position.y;
 
-        //Balls
-        QuestionMark = GameObject.FindWithTag("QuestionMark");
-        Number31 = GameObject.FindWithTag("Number31");
-        Congratz = GameObject.FindWithTag("Congratz");
-        WrongNumber = GameObject.FindWithTag("Wrong");
-        StartNextLevelButton = GameObject.FindWithTag("StartNextLevel");
+            //Balls
+            QuestionMark = GameObject.FindWithTag("QuestionMark");
+            Number31 = GameObject.FindWithTag("Number31");
+            
+            //Button
+            StartNextLevelButton = GameObject.FindWithTag("StartNextLevel");
 
-        Congratz.SetActive(false);
-        WrongNumber.SetActive(false);
-        StartNextLevelButton.SetActive(false);
+            //Texts
+            Congratz = GameObject.FindWithTag("Congratz");
+            WrongNumber = GameObject.FindWithTag("Wrong");
+            //LevelNameTwo = GameObject.FindWithTag("LevelNameTwo");
+            //LevelNameThree = GameObject.FindWithTag("LevelNameThree");
+
+            Congratz.SetActive(false);
+            WrongNumber.SetActive(false);
+            StartNextLevelButton.SetActive(false);
+            //LevelNameTwo.SetActive(false);
+            //LevelNameThree.SetActive(false);
+         }
+
     }
 
     // Update is called once per frame
     void Update()
     {
+         Scene currentScene = SceneManager.GetActiveScene ();
+ 
+         string sceneName = currentScene.name;
+ 
+         if (sceneName == "KnowbilityScene") 
+         {
          if(buttonHit == true){
              buttonHit = false;
              button.transform.position = new Vector3(button.transform.position.x, button.transform.position.y - buttonDownDistance, button.transform.position.z);
@@ -59,6 +85,7 @@ public class ButtonControll : MonoBehaviour
          }
         //System.out.print("Hallu");
         //Console.WriteLine("Hallu");
+         }
     }
 
     private void OnTriggerEnter(Collider other) {
@@ -69,6 +96,8 @@ public class ButtonControll : MonoBehaviour
             Congratz.SetActive(false);
             WrongNumber.SetActive(false);
             StartNextLevelButton.SetActive(false);
+            //LevelNameTwo.SetActive(false);
+            //LevelNameThree.SetActive(false);
 
 
             if (QuestionMark != null && Number31 != null)

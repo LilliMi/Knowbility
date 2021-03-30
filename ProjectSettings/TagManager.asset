@@ -10,6 +10,19 @@ TagManager:
   - Congratz
   - Wrong
   - StartNextLevel
+  - StartLevelThree
+  - StartLevelFour
+  - LevelName
+  - LevelNameThree
+  - CongratzLevelTwo
+  - WrongLevelTwo
+  - WrongLevelThree
+  - CongratzLevelThree
+  - QuestionMarkLevelTwo
+  - QuestionMarkLevelThree
+  - Number5
+  - Number38
+  - LevelNameTwo
   layers:
   - Default
   - TransparentFX

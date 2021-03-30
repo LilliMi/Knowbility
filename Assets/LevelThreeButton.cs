@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class NextLevelButton : MonoBehaviour
+public class LevelThreeButton : MonoBehaviour
 {
-    private GameObject nextLevelButton;
+    private GameObject levelThreeButton;
 
 
     // Start is called before the first frame update
     void Start()
     {
-        nextLevelButton = GameObject.FindWithTag("StartNextLevel");
+        levelThreeButton = GameObject.FindWithTag("StartLevelThree");
     }
 
     // Update is called once per frame
@@ -22,7 +22,7 @@ public class NextLevelButton : MonoBehaviour
 
     private void OnTriggerEnter(Collider other) {
         if(other.CompareTag("PlayerHand")){
-            SceneManager.LoadScene("LevelTwo_KnowbilityScene");
+            SceneManager.LoadScene("LevelThree_KnowbilityScene");
         }
     }
 }
