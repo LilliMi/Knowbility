@@ -347,7 +347,7 @@ GameObject:
   m_Component:
   - component: {fileID: 543085995}
   m_Layer: 0
-  m_Name: FloatingBalls (1)
+  m_Name: FloatingBallsLevelTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1256,7 +1256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1002015891}
   m_Layer: 0
-  m_Name: TableBalls (1)
+  m_Name: TableBallsLevelTwo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

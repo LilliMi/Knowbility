@@ -89,6 +89,12 @@ public class ButtonControll : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
+        Scene currentScene = SceneManager.GetActiveScene ();
+ 
+         string sceneName = currentScene.name;
+ 
+         if (sceneName == "KnowbilityScene") 
+         {
         if(other.CompareTag("PlayerHand") && canHitAgain < Time.time){
             canHitAgain = Time.time + buttonHitAgainTime;
             buttonHit = true;
@@ -119,6 +125,7 @@ public class ButtonControll : MonoBehaviour
 
             }
         }
+         }
 
     }
 }
